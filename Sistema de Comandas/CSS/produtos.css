@@ -19,12 +19,11 @@ body {
     left: 0;
     overflow: hidden;
     transition: .5s;
-    z-index: 2;
 }
 
 .menu-lateral.expandir {
     width: 300px;
-    z-index: 2;
+    z-index: 1;
 }
 
 .btn-expandir {
@@ -100,21 +99,19 @@ ul li.item-lateral a .icon > i {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.versao {
+.aba {
     display: flex;
     align-items: center;
+    justify-content: center;
+    background-color: #333;
+    border-radius: 0 50px 50px 0;
+    padding: 5px 50px 5px 10px; 
     letter-spacing: 3px;
-    gap: 10px;
 }
 
-.versao img {
-    width: 45px;
-    height: 45px;
-    margin-left: 20px;
-}
-
-.versao p {
-    color: #333;
+.aba p {
+    color: #fff;
+    font-size: 20pt;
 }
 
 .home {
@@ -154,78 +151,17 @@ ul li.item-lateral a .icon > i {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    list-style-type: none;
-    letter-spacing: 3px;
-    cursor: pointer;
-}
-
-.categorias ul li.tipo {
-    transition: .2s;
-}
-
-.categorias ul li.tipo:hover {
-    transform: scale(1.1);
-    background-color: rgba(49, 202, 87, 0.3);
-}
-
-.tipo a {
-    display: flex;
-    padding: 20px 18px 20px 18px;
-    font-weight: bolder;
-    text-decoration: none;
-    color: #333;
 }
 
 .produtos {
     width: 96vw;
     height: 100vh;
     display: flex;
-    flex-direction: row;
-    background: #eeeeee;
+    background: #ececec;
     overflow: hidden;
     overflow-y: scroll;
     flex-wrap: wrap;
     z-index: -1;
-}
-
-.produtos > img {
-    width: 150px;
-    height: 150px;
-    margin: 50px;
-}
-
-.item-produto {
-    width: 300px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-    background: #464646;
-    box-shadow: 0 0 5px 2px rgb(0, 0, 0, 0.2);
-    border-radius: 12px;
-    text-decoration: none;
-    margin: 50px;
-    word-break: normal;
-    transition: .2s;
-    z-index: 1;
-}
-
-.item-produto:hover {
-    transform: scale(1.1);
-}
-
-.item-produto img {
-    width: 100%;
-    border-radius: 12px 12px 0 0;
-}
-
-.item-produto p {
-    color: #fff;
-    font-size: 16px;
-    letter-spacing: 3px;
-    padding-bottom: 15px;
-    margin: 0 20px 0 15px;
 }
