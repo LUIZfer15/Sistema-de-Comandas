@@ -20,7 +20,7 @@
     left: 0;
     overflow: hidden;
     transition: .5s;
-    z-index: 1;
+    z-index: 4;
 }
 
 .menu-lateral.expandir {
@@ -92,7 +92,7 @@ ul li.item-lateral a .icon>i {
 }
 
 .linha-home {
-    height: 10vh;
+    height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -117,40 +117,55 @@ ul li.item-lateral a .icon>i {
     color: #333;
 }
 
-.home {
+.first-right {
     display: flex;
+    justify-content: space-around;
     align-items: center;
     letter-spacing: 3px;
-    gap: 40px;
+    gap: 70px;
+    margin-right: 50px;
 }
 
-.home a {
+.home {
     color: #333;
+    border: none;
+    background-color: #ffffff;
+    font-size: 14pt;
+    font-weight: bold;
+    letter-spacing: 3px;
+    cursor: pointer;
     text-decoration: none;
 }
-
-.home a:hover {
+.home:hover {
     transform: scale(1.1);
 }
 
-.home img {
-    width: 35px;
-    height: 35px;
+.user {
+    border: none;
+    background-color: #ffffff;
+}
+
+.user i {
+    font-size: 25pt;
     cursor: pointer;
-    margin-right: 40px;
+}
+
+.user:hover {
+    transform: scale(1.1);
 }
 
 .menu-img {
     width: 100%;
+    z-index: 3;
 }
 
-.categorias {
-    width: 100%;
+.categories {
     height: 12vh;
-    box-shadow: 0px 7px 20px 0px rgb(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 20px 0px rgb(0, 0, 0, 0.2);
+    z-index: 2;
 }
 
-.categorias ul {
+.categories ul {
     width: 100%;
     height: 100%;
     display: flex;
@@ -161,18 +176,18 @@ ul li.item-lateral a .icon>i {
     cursor: pointer;
 }
 
-.categorias ul li.tipo {
+.categories ul li.tipo {
     transition: .2s;
 }
 
-.categorias ul li.ativo {
+.categories ul li.ativo {
     transform: scale(1.1);
-    background: #b0e4c8;
+    background: #76d16a;
 }
 
-.categorias ul li.tipo:hover {
+.categories ul li.tipo:hover {
     transform: scale(1.1);
-    background: #b0e4c8;
+    background: #76d16a;
 }
 
 .tipo a {
@@ -184,7 +199,6 @@ ul li.item-lateral a .icon>i {
 }
 
 .produtos {
-    width: 96vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -192,17 +206,12 @@ ul li.item-lateral a .icon>i {
     overflow: hidden;
     overflow-y: scroll;
     flex-wrap: wrap;
-}
-
-.produtos>img {
-    width: 150px;
-    height: 150px;
-    margin: 50px;
+    z-index: 0;
 }
 
 .item-produto {
     width: 300px;
-    height: 300px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -223,10 +232,10 @@ ul li.item-lateral a .icon>i {
 
 .item-produto p {
     color: #fff;
-    font-size: 16px;
+    font-size: 12pt;
     letter-spacing: 3px;
-    padding-bottom: 15px;
-    margin: 0 20px 0 15px;
+    padding-bottom: 10px;
+    margin: 5px 20px 0 15px;
 }
 
 .item-produto:hover {

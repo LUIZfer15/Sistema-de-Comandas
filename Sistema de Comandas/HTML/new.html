@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/new.css" />
+    <title>Criar Produto</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu-lateral">
+            <div class="btn-expandir">
+                <i class="bi bi-list" id="btn-exp"></i>
+            </div>
+
+            <ul class="lateral">
+                <li class="item-lateral">
+                    <a href="../HTML/vender.html">
+                        <span class="icon"><i class="bi bi-check-circle"></i></span>
+                        <span class="txt-link">Vender</span>
+                    </a>
+                </li>
+                <li class="item-lateral">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-bell-fill"></i></span>
+                        <span class="txt-link">Pedidos</span>
+                    </a>
+                </li>
+                <li class="item-lateral ativo">
+                    <a href="../HTML/produtos.html">
+                        <span class="icon"><i class="bi bi-boxes"></i></span>
+                        <span class="txt-link">Produtos</span>
+                    </a>
+                </li>
+                <li class="item-lateral">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-clock-history"></i></span>
+                        <span class="txt-link">Histórico</span>
+                    </a>
+                </li>
+                <li class="item-lateral">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-bar-chart-line-fill"></i></span>
+                        <span class="txt-link">Estatísticas</span>
+                    </a>
+                </li>
+                <li class="item-lateral">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-gear-fill"></i></span>
+                        <span class="txt-link">Configurações</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <header class="first-line">
+                <div class="aba">
+                    <h1>Cadastro</h1>
+                </div>
+                <div class="first-right">
+                    <a href="#" class="home">HOME</a>
+                    <div class="profile">
+                        <span><i class="bi bi-person-circle" id="person"></i></span>
+                    </div>
+                    <div class="person">
+                        <div class="select-person">
+                            <i class="bi bi-person-fill"></i>
+                            <p>Perfil</p>
+                        </div>
+                        <div class="select-person">
+                            <i class="bi bi-card-list"></i>
+                            <p>Notas</p>
+                        </div>
+                        <div class="select-person">
+                            <i class="bi bi-chat-left-fill"></i>
+                            <p>Mensagens</p>
+                        </div>
+                        <div class="select-person">
+                            <i class="bi bi-gear-fill"></i>
+                            <p>Preferências</p>
+                        </div>
+                        <div class="select-person">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <p>Sair</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="line"></div>
+            <div class="create-product">
+                <div class="left">
+                    <input type="file" id="product-image" accept="image/*" hidden>
+                    <div class="img-area">
+                        <img src="../Images/Album.png" alt="image">
+                    </div>
+                    <div class="image">
+                        <button class="select-img">Adicione uma Imagem</button>
+                    </div>
+                    <div class="fill">
+                        <!-- Campo de Nome do Produto -->
+                        <p>Nome do Produto</p>
+                        <input type="text" id="product_name" required>
+
+                        <!-- Campo de Preço de Venda -->
+                        <p>Preço de Venda</p>
+                        <input type="text" id="product_price" placeholder="R$ 0,00" required
+                            oninput="formatarMoeda(this)" onblur="restaurarPlaceholder(this)">
+
+                        <!-- Campo de Preço Promocional -->
+                        <p>Desconto</p>
+                        <input type="text" id="product_promo" placeholder="Preço promocional"
+                            oninput="formatarMoeda2(this)" onblur="restaurarPlaceholder2(this)">
+                        <p class="cross-out">O preço de venda será riscado (ex: R$ 10,00 por R$ 5,00)</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="fill2">
+                        <p class="categoria">Categoria</p>
+                        <div class="select" id="select">
+                            <p class="selecione">Selecione a categoria</p>
+                            <i class="bi bi-caret-up-fill" id="arrow"></i>
+                        </div>
+                        <div class="category">
+                            <div class="select-category">
+                                <p>Lanches</p>
+                            </div>
+                            <div class="select-category">
+                                <p>Pizza</p>
+                            </div>
+                            <div class="select-category">
+                                <p>Bebidas</p>
+                            </div>
+                            <div class="select-category">
+                                <p>Japonesa</p>
+                            </div>
+                            <div class="select-category">
+                                <p>Brasileira</p>
+                            </div>
+                            <div class="select-category">
+                                <p>Doces & Bolos</p>
+                            </div>
+                            <div class="select-category">
+                                <p>Açai</p>
+                            </div>
+                            <div class="select-category">
+                                <p>Árabe</p>
+                            </div>
+                            <div class="select-category">
+                                <p>Chinesa</p>
+                            </div>
+                            <div class="select-category">
+                                <p>Sorvetes</p>
+                            </div>
+                            <div class="select-category">
+                                <p>Italiana</p>
+                            </div>
+                            <div class="select-category">
+                                <p>Vegetariana</p>
+                            </div>
+                            <div class="select-category">
+                                <p>Vegano</p>
+                            </div>
+                            <div class="select-category">
+                                <p>Salgados</p>
+                            </div>
+                            <div class="select-category">
+                                <p>Pasteis</p>
+                            </div>
+                        </div>
+                        <div class="descrição">
+                            <p>Descrição</p>
+                            <input type="text" required>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="save">
+                            <button onclick="saveProduct()" id="botaoSalvar">Salvar</button>
+                        </div>
+                        <div class="cancel">
+                            <button onclick="goToView()" id="botaoCancelar">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JS/logica.js"></script>
+
+</body>
+
+</html>
